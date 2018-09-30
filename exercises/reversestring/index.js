@@ -21,11 +21,14 @@ function reverse(str) {
     //     .join('');
 
     // * for of solution
-    let reversed = '';
-    for (let character of str) {
-        reversed = character + reversed;
-    }
-    return reversed;
+    // let reversed = '';
+    // for (let character of str) {
+    //     reversed = character + reversed;
+    // }
+    // return reversed;
+
+    // * reduce solution
+    return str.split('').reduce((reversed, character) => character + reversed, '');
 }
 
 module.exports = reverse;
