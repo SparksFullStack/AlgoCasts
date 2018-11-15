@@ -21,13 +21,23 @@ function capitalize(str) {
     // return resultArr.join(" ");
 
     // * Grider's solution
-    const words = [];
+    // const words = [];
 
-    for (let word of str.split(" ")){
-        words.push(word[0].toUpperCase() + word.slice(1));
+    // for (let word of str.split(" ")){
+    //     words.push(word[0].toUpperCase() + word.slice(1));
+    // }
+
+    // return words.join(" ");
+
+    // * My second solution
+    const resultArr = [];
+    const splitString = str.split(" ");
+
+    for (let word of splitString){
+        resultArr.push(word[0].toUpperCase() + word.slice(1));
     }
 
-    return words.join(" ");
+    return resultArr.join(" ");
 }
 
 module.exports = capitalize;
